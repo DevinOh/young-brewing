@@ -6,7 +6,81 @@ body {
   padding: 0;
 
 }
+header.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
+header .nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+header .nav-menu ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+header .nav-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+header .nav-menu ul li a:hover {
+  text-decoration: underline;
+}
+
+/* 햄버거 아이콘 스타일 */
+header .hamburger {
+  display: none;
+  position:absolute;
+  top:10px;
+  right:20px;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* 반응형: 화면이 768px 이하일 때 */
+@media screen and (max-width: 768px) {
+  header .nav-menu {
+    display: none; /* 기본적으로 메뉴 숨김 */
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  header .nav-menu.open {
+    display: flex; /* 메뉴 열림 */
+  }
+  .nav-menu ul {
+    flex-direction: column; /* 세로로 정렬 */
+  }
+
+  .nav-menu ul li {
+    margin: 10px 0; /* 세로 간격 */
+  }
+
+  header .hamburger {
+    display: block; /* 햄버거 아이콘 표시 */
+
+  }
+}
 .App {
   text-align: center;
 
