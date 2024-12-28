@@ -60,7 +60,7 @@ header .hamburger {
     background-color: #333;
     position: absolute;
     top: 60px;
-    right: 20px;
+    right: 10px;
     padding: 10px;
     border-radius: 5px;
   }
@@ -73,7 +73,7 @@ header .hamburger {
   }
 
   .nav-menu ul li {
-    margin: 10px 0; /* 세로 간격 */
+    margin: 10px 20px; /* 세로 간격 */
   }
 
   header .hamburger {
