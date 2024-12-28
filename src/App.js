@@ -1,33 +1,16 @@
 // Import React and necessary libraries (React와 필요한 라이브러리 import)
-import React, { useState } from "react";
+import React from "react";
+import Header from "./components/Header";
 
 // Import CSS styles (CSS 스타일 가져오기)
 import "./App.css";
 
 function App() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // 메뉴 열림/닫힘 상태
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen); // 메뉴 토글
-  };
   return (
     <div className="App">
-    {/* Header and Navigation */}
-     <header className="navbar">
-       
-       <nav className={`nav-menu ${isMenuOpen ? "open" : ""}`}>
-         <ul>
-           <li><a href="#home">Home</a></li>
-           <li><a href="#about">About</a></li>
-           <li><a href="#menu">Menu</a></li>
-           <li><a href="#contact">Contact</a></li>
-         </ul>
-       </nav>
-       {/* Hamburger Icon */}
-       <div className="hamburger" onClick={toggleMenu}>
-         ☰
-       </div>
-     </header>
+
+     <Header></Header>
 
       {/* Company Name Section (회사 이름 섹션) */}
       <section className="hero">{/*코멘트 테스트 */}
